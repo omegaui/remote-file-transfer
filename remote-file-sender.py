@@ -2,6 +2,8 @@
 # @author: @omegaui <github.com/omegaui>
 # @license: GNU GPL v3
 
+#my wlan address - '192.168.43.1'
+
 import socket, os, keyboard, pathlib
 from pick import pick
 from termcolor import colored, cprint
