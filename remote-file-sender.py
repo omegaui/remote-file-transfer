@@ -11,7 +11,7 @@ print('Finding the Server ...')
 
 try:
 	serverSocket = socket.socket()
-	serverSocket.connect((socket.gethostname(), 20000))
+	serverSocket.connect(('192.168.43.1', 20000))
 	print('Connected to the Server!')
 except:
 	print('Unable to connect to the server!')

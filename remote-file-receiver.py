@@ -10,7 +10,7 @@ server = socket.socket()
 
 try:
 	print('Starting file server ...')
-	server.bind((socket.gethostname(), 20000))
+	server.bind(('192.168.43.1', 20000))
 	print('Starting file server ... Done!')
 except:
 	print('Cannot start the server!')
