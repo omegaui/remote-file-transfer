@@ -7,7 +7,7 @@
 import socket, os, keyboard, pathlib
 from pick import pick
 from termcolor import colored, cprint
-import magic
+import magic, time
 
 print('Finding the Server ...')
 
@@ -37,10 +37,11 @@ def send_file(filePath):
 	with open(filePath, 'r' if isTextFile else 'rb') as fileObj:
 		content = fileObj.read()
 
-		
 		blobSize = len(content.encode('utf-8') if isTextFile else content)
 		print('transfered blob size : ', blobSize)
 		serverSocket.send('{0}'.format(blobSize).encode('utf-8'))
+
+		time.sleep(1)
 
 		serverSocket.send(content.encode('utf-8') if isTextFile else content)
 		cprint('File received by the Server!', 'white', 'on_green')
